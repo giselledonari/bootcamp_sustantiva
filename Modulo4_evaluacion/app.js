@@ -9,12 +9,17 @@ class Usuarios{
         .catch(error=>console.log(error))
     }
     nombres(){
-        this.data.map(usuario=>{return console.log(usuario.name)})
+        document.getElementById("respuesta").innerHTML=`<h4>Lista Nombres:</h4>`
+        this.data.map(usuario=>{
+            console.log(usuario.name)
+            document.getElementById("respuesta").innerHTML+=`<li>${usuario.name}</li>`
+        })
     }
     informacionBasica(){
         let nombreUsuario=prompt("Indique el nombre del usuario en normato Nombre Apellido");
         let usuario=this.data.find((data)=>{return data.name==nombreUsuario})
         if (usuario){
+            document.getElementById("respuesta").innerHTML=`<p>Información entregada por consola</p>`
             console.log(`Informacion basica \n usermame: ${usuario.username} \n email: ${usuario.email}`)
         }
         else{
@@ -26,6 +31,7 @@ class Usuarios{
         let usuario=this.data.find((data)=>{return data.name==nombreUsuario})
         let direccion=usuario.address
         if (usuario){
+            document.getElementById("respuesta").innerHTML=`<p>Información entregada por consola</p>`
             console.log("Dirección")
             for (let i in direccion){
                 console.log(i,":", direccion[i])
@@ -39,6 +45,7 @@ class Usuarios{
         let nombreUsuario=prompt("Indique el nombre del usuario en normato Nombre Apellido");
         let usuario=this.data.find((data)=>{return data.name==nombreUsuario})
         if (usuario){
+            document.getElementById("respuesta").innerHTML=`<p>Información entregada por consola</p>`
             let text=`Informacion Avanzada \n Phone: ${usuario.phone} \n Website: ${usuario.website} \n Company \n`
             let company=usuario.company
             for (let i in company){
@@ -51,12 +58,20 @@ class Usuarios{
         }
     }
     companias(){
-        this.data.map((usuario)=>{return console.log(`Compañia:${usuario.company.name}, Frase: ${usuario.company.catchPhrase}`)})
+        document.getElementById("respuesta").innerHTML=`<h4>Lista Compañias:</h4>`
+        this.data.map((usuario)=>{
+            console.log(`Compañia:${usuario.company.name} | Frase: ${usuario.company.catchPhrase}`)
+            document.getElementById("respuesta").innerHTML+=`<li><b>Compañia: </b>${usuario.company.name} | <b>Frase:</b> ${usuario.company.catchPhrase}</li>`
+        })
     }
     nombresOrdenados(){
+        document.getElementById("respuesta").innerHTML=`<h4>Lista Nombres Ordenados:</h4>`
         let nombres=this.data.map(usuario=>{return (usuario.name)});
         let nombresOrdenados=nombres.sort()
-        nombresOrdenados.map((nombre)=>{return (console.log(nombre))})
+        nombresOrdenados.map((nombre)=>{
+            console.log(nombre)
+            document.getElementById("respuesta").innerHTML+=`<li>${nombre}</li>`   
+        })
 
     }
 }
