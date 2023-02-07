@@ -1,0 +1,116 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image:url(../images/lottery.png);
+    margin: 0;
+    color:  #efb810;
+    text-shadow: #5d4a1f;
+
+}
+nav{
+    background-color: black;
+    margin: 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:baseline
+}
+nav a{
+    text-decoration: none;
+    color: #9f7928;
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+}
+nav a:hover{
+    color:white
+}
+
+.resp{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.carton {
+    width: 180px;
+    height: 200px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    margin: 10px;
+    color: black;
+    border-radius: 15px;
+}
+
+.cabecera {
+    padding-top: 5px;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    margin-left: 10px;
+    color: #9f7928;
+    text-shadow:5px 5px 3px 0px rgba(0,0,0,0.75) ;
+}
+h3{
+    font-size: 20px;
+}
+p{
+    font-size: 10px;
+}
+
+.cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero {
+    background-color: rgb(0, 0, 0);
+    width: 22px;
+    height: 22px;
+    margin: 5px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color:  #efb810;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    margin: 10px;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+
+}
+
+.buttonNuevo{
+    width: 150px;
+}
+
+button:hover{
+    cursor: pointer; 
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    text-align: center;
+    color: #5d4a1f;
+    margin-top: 10px;
+  }
