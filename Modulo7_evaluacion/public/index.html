@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-5 m-3">
+          <h5 class="mt-2">Ver registros</h5>
+          <form id="buscar">
+            <div class="input-group">
+              <select class="form-select" name="cantidad" id="cantidad">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+          </form>
+          <br>
+          <button id="ver-todos"  class="btn btn-warning">Ver todos </button>
+
+          <hr />
+
+          <h5 class="mt-2">Eliminar pais</h5>
+
+          <form id="eliminarPaises" class="mt-3">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Eliminar pais"
+              />
+              <button type="submit" class="btn btn-danger">Eliminar</button>
+            </div>
+          </form>
+          <hr />
+
+          <h5 class="mt-2">Agregar Pais</h5>
+
+          <form class="row g-3" method="post" action="/agregar">
+            <div class="col-12">
+              <label for="input-group" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nuevo-nombre"
+                name="nombre"
+              />
+            </div>
+            <div class="col-6">
+              <label for="input-group" class="form-label">Continente</label>
+              <input
+                type="text"
+                class="form-control"
+                id="continente"
+                name="continente"
+              />
+            </div>
+            <div class="col-6">
+              <label for="input-group" class="form-label">Poblacion</label>
+              <input
+                type="number"
+                class="form-control"
+                id="poblacion"
+                name="poblacion"
+              />
+            </div>
+            <div class="col-6">
+              <label for="input-group" class="form-label">Pib 2019</label>
+              <input
+                type="number"
+                class="form-control"
+                id="nuevo2019"
+                name="nuevo2019"
+              />
+            </div>
+            <div class="col-6">
+              <label for="input-group" class="form-label">Pib 2020</label>
+              <input
+                type="number"
+                class="form-control"
+                id="nuevo2020"
+                name="nuevo2020"
+              />
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">Agregar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-4 mt-3" style="margin-left: 100px; width: 500px">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Pais</th>
+                <th scope="col">Contiente</th>
+                <th scope="col">Poblacion</th>
+                <th scope="col">Pib 2019</th>
+                <th scope="col">Pib 2020</th>
+              </tr>
+            </thead>
+
+            <tbody id="resp"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
